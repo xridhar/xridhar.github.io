@@ -1,0 +1,26 @@
+/* FORM VALIDATION */
+input:valid + .invalid{
+	visibility: hidden;
+}
+
+input:invalid + .invalid{
+	visibility: visible;
+}
+
+input:required{
+	border:2px solid #900;
+}
+
+
+input:valid{
+	border: 2px solid #ccc;
+}
+
+.invalid{
+	margin-top: 0px;
+	margin-bottom: 0px;
+	font-size: 0.8em;
+	color: #666;
+}
+
+/* FORM VALIDATION */

@@ -8,16 +8,33 @@
 <!-- Optional theme -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
 
+<link rel="stylesheet" href="style/custom.css">
+
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="container">
-<ul>
-<li>
-Form Validation
-</li>
-</ul>
+<h2>Form validation with pseudo classes</h2>
+<div class="row">
+<form>
+<div class="form-group col-sm-4 col-md-4 col-xs-4 col-lg-4">
+<input type="text" name="fname" class="form-control" placeholder="First Name" pattern="[a-zA-z ]{5,}" maxlength="30" required />
+<div class="invalid">
+	The required user name may only be a series of alphabetical characters.
+</div>
+</div>
+<div class="form-group col-sm-4 col-md-4 col-xs-4 col-lg-4">
+<input type="email" name="email" class="form-control" placeholder="Email" required />
+<div class="invalid">
+	The required email address may not include any special characters other than the '@' sign.
+</div>
+</div>
+<div class="form-group col-sm-4 col-md-4 col-xs-4 col-lg-4">
+<button type="submit" class="btn btn-md btn-success">Submit</button>
+</div>
+</form>
+</div>
 </div>
 </body>
 </html>
